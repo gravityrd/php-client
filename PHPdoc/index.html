@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>API Documentation</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet" media="all"/>
+    <link href="css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.smooth-scroll.js"></script>
+    <script src="js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+    
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="index.html">API Documentation</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="reports/errors.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">33</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reports/markers.html">
+                                                                                                                                                                                        <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1340250665"></a>
+                                <a href="namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1340250665" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="classes/GravityClient.html">GravityClient</a></li>
+                                                    <li class="class"><a href="classes/GravityClientConfig.html">GravityClientConfig</a></li>
+                                                    <li class="class"><a href="classes/GravityEvent.html">GravityEvent</a></li>
+                                                    <li class="class"><a href="classes/GravityException.html">GravityException</a></li>
+                                                    <li class="class"><a href="classes/GravityFaultInfo.html">GravityFaultInfo</a></li>
+                                                    <li class="class"><a href="classes/GravityItem.html">GravityItem</a></li>
+                                                    <li class="class"><a href="classes/GravityItemRecommendation.html">GravityItemRecommendation</a></li>
+                                                    <li class="class"><a href="classes/GravityNameValue.html">GravityNameValue</a></li>
+                                                    <li class="class"><a href="classes/GravityRecEngException.html">GravityRecEngException</a></li>
+                                                    <li class="class"><a href="classes/GravityRecommendationContext.html">GravityRecommendationContext</a></li>
+                                                    <li class="class"><a href="classes/GravityUser.html">GravityUser</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content namespace">
+                    <nav>
+                                                
+                                            </nav>
+                    <h1><small></small>\</h1>
+
+                    
+                    
+                    
+                                        <h2>Classes</h2>
+                    <table class="table table-hover">
+                                            <tr>
+                            <td><a href="classes/GravityClient.html">GravityClient</a></td>
+                            <td><em>The GravityClient class can be used to send events, item and user information to
+the recommendation engine and get recommendations.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityClientConfig.html">GravityClientConfig</a></td>
+                            <td><em></em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityEvent.html">GravityEvent</a></td>
+                            <td><em>Describes an event for the recommendation engine, for example a user viewed an item.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityException.html">GravityException</a></td>
+                            <td><em>The exception class used by the recommendation engine client in case of an error.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityFaultInfo.html">GravityFaultInfo</a></td>
+                            <td><em>Describes the error occured during a request.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityItem.html">GravityItem</a></td>
+                            <td><em>An item is something that can be recommended to users.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityItemRecommendation.html">GravityItemRecommendation</a></td>
+                            <td><em>Contains a list of recommended items. This class is here only to describe the result,
+the actual result will not be an instance of this class because of json deserialization.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityNameValue.html">GravityNameValue</a></td>
+                            <td><em>A name and a value. This can be used to provide information about items, users and events.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityRecEngException.html">GravityRecEngException</a></td>
+                            <td><em>This class used to deserialize exceptions coming from the recommendation engine.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityRecommendationContext.html">GravityRecommendationContext</a></td>
+                            <td><em>Contains information for a recommendation request.</em></td>
+                        </tr>
+                                            <tr>
+                            <td><a href="classes/GravityUser.html">GravityUser</a></td>
+                            <td><em>A user in the recommendation system. A user is an entity which generates event, and can get recommendations.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                        <dt>Namespace hierarchy</dt>
+                        <dd class="hierarchy">
+                                                                                                                                                <div class="namespace-wrapper">\</div>
+                        </dd>
+                    </dl>
+                </aside>
+            </div>
+
+                        <div class="row-fluid">
+                <section class="span8 content namespace">
+                    <h2>Constants</h2>
+                </section>
+                <aside class="span4 detailsbar"></aside>
+            </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_COMM_CONNECT" name="constant_GRAVITY_ERRORCODE_COMM_CONNECT" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_COMM_CONNECT" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_COMM_CONNECT</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_COMM_CONNECT</pre>
+                <p><em>Could not connect to remote host.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_COMM_HOSTRESOLVE" name="constant_GRAVITY_ERRORCODE_COMM_HOSTRESOLVE" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_COMM_HOSTRESOLVE" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_COMM_HOSTRESOLVE</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_COMM_HOSTRESOLVE</pre>
+                <p><em>Could not resolve the remote host name.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_COMM_HTTPERRORCODE" name="constant_GRAVITY_ERRORCODE_COMM_HTTPERRORCODE" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_COMM_HTTPERRORCODE" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_COMM_HTTPERRORCODE</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_COMM_HTTPERRORCODE</pre>
+                <p><em>A non-200 HTTP response code was received.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_COMM_OTHER" name="constant_GRAVITY_ERRORCODE_COMM_OTHER" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_COMM_OTHER" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_COMM_OTHER</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_COMM_OTHER</pre>
+                <p><em>Unknown error during communication.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_COMM_TIMEOUT" name="constant_GRAVITY_ERRORCODE_COMM_TIMEOUT" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_COMM_TIMEOUT" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_COMM_TIMEOUT</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_COMM_TIMEOUT</pre>
+                <p><em>Timeout during communication.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                                        <div class="row-fluid">
+        <div class="span8 content class">
+            <a id="constant_GRAVITY_ERRORCODE_CONFIG_ERROR" name="constant_GRAVITY_ERRORCODE_CONFIG_ERROR" class="anchor"></a>
+            <article id="constant_GRAVITY_ERRORCODE_CONFIG_ERROR" class="constant">
+                <h3 class="">GRAVITY_ERRORCODE_CONFIG_ERROR</h3>
+                <pre class="signature">GRAVITY_ERRORCODE_CONFIG_ERROR</pre>
+                <p><em>The client was initilized with invalid configuration.</em></p>
+                <p>You should never use the value of the constant, always use it be referencing its name.</p>
+            </article>
+        </div>
+        <aside class="span4 detailsbar">
+            <h1><i class="icon-arrow-down"></i></h1>
+                        <dl>
+                                <dt>File</dt>
+                <dd><a href=""><div class="path-wrapper"></div></a></dd>
+                                                                            </dl>
+            <h2>Tags</h2>
+            <table class="table table-condensed">
+                                    <tr>
+                        <th>
+                            package
+                        </th>
+                        <td>
+                                                            <p>GravityClient</p>
+                                                    </td>
+                    </tr>
+                            </table>
+        </aside>
+    </div>
+
+                            
+            
+        </div>
+    </section>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="reports/errors.html">Errors</a></li>
+                                    <li><a href="reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on August 19th, 2015 at 14:56.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>
