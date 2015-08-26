@@ -4,7 +4,6 @@
  * Gravity recommendation engine.
  *
  * @package GravityClient
- * @author Péter Ritzinger
  */
 
 /**
