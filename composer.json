@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-0": {
-            "php-client": "GravityClient"
+            "Gravity\\": "GravityClient/"
         }
     }
 }
