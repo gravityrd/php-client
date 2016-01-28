@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'php-client' => array($baseDir . '/GravityClient'),
+    'Gravity\\' => array($baseDir . '/GravityClient'),
 );
