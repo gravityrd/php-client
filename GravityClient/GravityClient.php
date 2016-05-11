@@ -36,6 +36,8 @@
  * Use your own factory function (like createGravityClient in the example above) to pass your configuration information to the GravityClient constructor.
  * 
  */
+ 
+namespace Gravity;
 
 class GravityClient {
 
