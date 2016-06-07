@@ -15,7 +15,7 @@
  * <pre>
  *		function createGravityClient() {
  *			$config = new GravityClientConfig();
- *			$config->remoteUrl = 'https://saas.gravityrd.com/grrec-CustomerID-war/WebshopServlet';
+ *			$config->remoteUrl = 'https://<CUSTOMERID>-<SERVERLOCATION>.gravityrd-services.com/grrec-<CUSTOMERID>-war/WebshopServlet';
  *			$config->user = 'sampleUser';
  *			$config->password = 'samplePasswd';
  *			$config->retry = 0;
