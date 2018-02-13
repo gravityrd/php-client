@@ -2,9 +2,9 @@
     "name": "gravityrd/php-client",
     "type": "library",
     "description": "PHP client to access Gravity R&D",
-    "keywords": ["client","gravityrd", "php-client"],
+    "keywords": ["client","gravityrd", "php-client","yusp"],
     "homepage": "https://github.com/gravityrd/php-client",
-    "license": "GNU",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Gravity R&D",
