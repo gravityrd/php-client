@@ -44,12 +44,13 @@ class GravityClient {
 	/**
 	 * The version info of the client.
 	 */
-	public $version = '1.0.13';
+	public $version = '1.0.14';
 
-	/**
-	 * Creates a new client instance with the specified configuration
-	 * @param GravityClientConfig <var>$config</var> The configuration
-	 */
+    /**
+     * Creates a new client instance with the specified configuration
+     * @param GravityClientConfig <var>$config</var> The configuration
+     * @throws GravityException
+     */
 	public function __construct(GravityClientConfig $config) {
 		if ($config->timeoutSeconds <= 0) {
 			throw new GravityException(
@@ -297,7 +298,7 @@ class GravityClient {
 					// could not detect original request URI, send SAPI name for debugging purposes
 					$header[] = "X-PhpServerAPIName: ".php_sapi_name();
 				}
-			} catch (Exception $e) {
+			} catch (\Exception $e) {
 				// FIXME: add error to the param list ...
 			}
 		}
@@ -371,6 +372,13 @@ class GravityClient {
 		}
 	}
 
+    /**
+     * @param $ch
+     * @param $result
+     * @param $verbStr
+     * @return mixed
+     * @throws GravityException
+     */
 	private function handleError($ch, $result, $verbStr) {
 		$errorNumber = curl_errno($ch);
 		if ($errorNumber != 0) {
@@ -1027,7 +1035,7 @@ define('GRAVITY_ERRORCODE_COMM_HTTPERRORCODE', -6);
 /**
  * The exception class used by the recommendation engine client in case of an error.
  */
-class GravityException extends Exception {
+class GravityException extends \Exception {
 	/**
 	 * Creates a new instance of GravityException.
 	 *
