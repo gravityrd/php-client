@@ -44,7 +44,7 @@ class GravityClient {
 	/**
 	 * The version info of the client.
 	 */
-	public $version = '1.0.14';
+	public $version = '1.0.15';
 
     /**
      * Creates a new client instance with the specified configuration
@@ -140,7 +140,7 @@ class GravityClient {
 	 * @param GravityItem[] $items The items to update
 	 */
 	public function updateItems(array $items) {
-		$this->sendRequest('updateItems', NULL, $items, false);
+		$this->sendRequest('updateItems', null, $items, false);
 	}
 
 	
@@ -172,6 +172,60 @@ class GravityClient {
 		$this->sendRequest('addUsers', array('async' => $async), $users, false);
 	}
 
+    /**
+     * Retrieves user metadata from the recommendation engine.
+     *
+     * @param string $userId
+     * @return mixed|null The json_decoded response body
+     */
+    public function getUserByUserId($userId){
+        return $this->sendRequest('getUser', array('userId' => $userId));
+    }
+
+    /**
+     * Retrieves user metadata from the recommendation engine if a user can be recognized from the specified cookieId.
+     *
+     * @param string $cookieId
+     * @return mixed|null The json_decoded response body
+     */
+    public function getUserByCookieId($cookieId){
+        return $this->sendRequest('getUser', array('cookieId' => $cookieId));
+    }
+
+    /**
+     * Retrieves full event history associated with the userId from the recommendation engine.
+     * @param string $userId
+     * @return mixed|null The json_decoded response body
+     */
+    public function getEventsByUserId($userId){
+        return $this->sendRequest('getEvents', array('userId' => $userId));
+    }
+
+    /**
+     * Retrieves full event history associated with the cookieId from the recommendation engine.
+     * @param string $cookieId
+     */
+    public function getEventsByCookieId($cookieId){
+        return $this->sendRequest('getEvents', array('cookieId' => $cookieId));
+    }
+
+    /**
+     * Deletes full event history assigned with the given cookieId from the recommendation engine.
+     * @param $cookieId
+     */
+    public function optOutCookie($cookieId){
+        $this->sendRequest('optOut', array('cookieId' => $cookieId), null, false);
+    }
+
+    /**
+     * Deletes full event history and metadata assigned with the given userId from the recommendation engine.
+     *
+     * @param $userId
+     */
+    public function optOutUserId($userId){
+        $this->sendRequest('optOut', array('userId' => $userId), null, false);
+    }
+    
 	/**
 	 * Returns a list of recommended items, based on the given context parameters.
 	 *
@@ -238,6 +292,11 @@ class GravityClient {
 		$this->sendRequest('testException', null, null, true);
 	}
 
+    /**
+     * @param $methodName
+     * @param $queryStringParams
+     * @return string
+     */
 	private function getRequestQueryString($methodName, $queryStringParams) {
 		$queryString = $queryStringParams ? http_build_query($queryStringParams, null, '&') : '';
 		if ($queryString) {
@@ -340,7 +399,14 @@ class GravityClient {
 		return array($err_code, $result);
 	}
 
-	private function sendRequest($methodName, $queryStringParams, $requestBody, $hasAnswer) {
+    /**
+     * @param string $methodName
+     * @param array $queryStringParams
+     * @param mixed $requestBody (anything that a json_encode can understand)
+     * @param bool $hasAnswer
+     * @return mixed|null
+     */
+	private function sendRequest($methodName, $queryStringParams, $requestBody = null, $hasAnswer = true) {
 		$retry = 0;
 		if(isset($this->config->retry) && is_int($this->config->retry)) {
 			$retry = $this->config->retry;
