@@ -44,7 +44,7 @@ class GravityClient {
 	/**
 	 * The version info of the client.
 	 */
-	public $version = '1.0.14';
+	public $version = '1.0.15';
 
     /**
      * Creates a new client instance with the specified configuration
